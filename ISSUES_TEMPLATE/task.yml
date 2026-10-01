@@ -1,0 +1,49 @@
+name: Task
+description: A piece of work to build, test or change
+title: "[Task] "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste athlete data, tokens, passwords or keys into this issue.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Website
+        - Mobile app
+        - Backend
+        - Infra
+        - Jarvis
+        - Docs
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - iOS
+        - Android
+        - Web
+        - All
+  - type: textarea
+    id: goal
+    attributes:
+      label: What needs to be done and why
+    validations:
+      required: true
+  - type: textarea
+    id: done-when
+    attributes:
+      label: Done when
+      description: How will you know it is finished? One or two checkable lines.
+      placeholder: "- [ ] ...\n- [ ] ..."
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Links, related issues or documents
