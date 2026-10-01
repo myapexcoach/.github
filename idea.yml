@@ -1,0 +1,37 @@
+name: Idea
+description: A possible feature or improvement, not yet decided
+title: "[Idea] "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are parked in the Inbox until you decide to do them.
+        Do not paste athlete data, tokens, passwords or keys into this issue.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Website
+        - Mobile app
+        - Backend
+        - Infra
+        - Jarvis
+        - Docs
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: Who benefits and how
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks, costs or open questions
